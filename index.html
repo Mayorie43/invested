@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trust Investment</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo" data-aos="fade-down" data-aos-delay="100">
+    <img src="images/imger.jpeg" alt="Trust Investment Logo">
+  </div>
+
+  <nav class="nav-links" data-aos="fade-down" data-aos-delay="200">
+    <a href="#">Markets</a>
+    <a href="#">Trading</a>
+    <a href="#">Research</a>
+    <a href="#">About</a>
+    <a href="#">Resources</a>
+  </nav>
+
+  <div class="nav-actions" data-aos="fade-down" data-aos-delay="300">
+    <a href="#" class="nav-login">Client Login</a>
+    <a href="#" class="btn btn-yellow">Open Account</a>
+  </div>
+
+  <div class="menu-toggle"
+       id="menuToggle"
+       onclick="toggleMenu()"
+       data-aos="fade-down"
+       data-aos-delay="400">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-links">
+    <a href="#">Markets</a>
+    <a href="#">Trading</a>
+    <a href="#">Research</a>
+    <a href="#">About</a>
+    <a href="#">Resources</a>
+  </div>
+
+  <div class="mobile-actions">
+    <a href="#" class="mobile-login">Client Login</a>
+    <a href="#" class="btn btn-yellow mobile-btn">Open Account</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <!-- ✅ ADD data-aos HERE -->
+  <div class="hero-content"
+       data-aos="fade-up"
+       data-aos-delay="200"
+       data-aos-duration="1000"
+       data-aos-easing="ease-out-cubic">
+
+    <h1 class="hero-title">
+      <!-- ✅ EACH LINE STAGGERS -->
+      <span class="keep"
+            data-aos="fade-up"
+            data-aos-delay="300">
+        Invest Smarter.
+      </span><br>
+
+      <span
+        data-aos="fade-up"
+        data-aos-delay="450">
+        Trade Faster.
+      </span><br>
+
+      <span class="keep"
+            data-aos="fade-up"
+            data-aos-delay="600">
+        Grow Wealth.
+      </span>
+    </h1>
+
+    <!-- ✅ PARAGRAPH -->
+    <p data-aos="fade-up" data-aos-delay="750">
+      Access global markets with institutional-grade tools and real-time analytics
+    </p>
+
+    <!-- ✅ BUTTONS -->
+    <div class="hero-buttons"
+         data-aos="fade-up"
+         data-aos-delay="900">
+      <a href="#" class="btn btn-yellow">Start Trading</a>
+      <a href="#" class="btn btn-outline">Explore Platform</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MARKET TICKER -->
+<div class="market-ticker">
+  <div class="ticker-track">
+    <div class="ticker-content" id="ticker">
+      Loading live market prices...
+    </div>
+  </div>
+</div>
+
+<!-- TOOLS SECTION -->
+<section class="tools-section">
+  <div class="tools-container">
+
+    <!-- HEADER -->
+    <div class="tools-header"
+         data-aos="fade-up"
+         data-aos-duration="900"
+         data-aos-easing="ease-out-cubic">
+      <span class="section-label">WHY CHOOSE US</span>
+      <h2>Professional Trading Tools</h2>
+      <p>
+        Experience institutional-grade trading technology designed for both
+        beginners and professional traders.
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="tools-grid">
+
+      <!-- CARD 1 -->
+      <div class="tool-card"
+           data-aos="fade-up"
+           data-aos-delay="100"
+           data-aos-duration="800"
+           data-aos-easing="ease-out-cubic">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3V21H21" />
+            <path d="M7 15L11 11L14 14L20 8" />
+          </svg>
+        </div>
+        <h3>Advanced Analytics</h3>
+        <p>
+          Real-time market data with advanced charting tools and technical
+          indicators for smarter decisions.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="tool-card"
+           data-aos="fade-up"
+           data-aos-delay="200"
+           data-aos-duration="800"
+           data-aos-easing="ease-out-cubic">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3L20 7V12C20 16.5 16.5 20.5 12 22
+                     C7.5 20.5 4 16.5 4 12V7L12 3Z" />
+            <path d="M9 12L11 14L15 10" />
+          </svg>
+        </div>
+        <h3>Secure Trading</h3>
+        <p>
+          Enterprise-grade security with encryption and multi-factor
+          authentication to protect your assets.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="tool-card"
+           data-aos="fade-up"
+           data-aos-delay="300"
+           data-aos-duration="800"
+           data-aos-easing="ease-out-cubic">
+        <div class="tool-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M13 2L3 14H11L9 22L21 10H13Z" />
+          </svg>
+        </div>
+        <h3>Lightning Execution</h3>
+        <p>
+          Ultra-low latency trade execution so you never miss a market
+          opportunity.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INVESTOR SHOWCASE -->
+<section class="inv-showcase">
+  <div class="inv-wrapper">
+
+    <div class="inv-header" data-aos="fade-up">
+      <h2>Our Global Investors</h2>
+      <p>Backed by experienced investors across technology, finance, and innovation.</p>
+    </div>
+
+    <div class="inv-grid">
+
+      <!-- INVESTOR CARD -->
+      <div class="inv-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="inv-image-ring">
+          <img src="images/htt.jpg" alt="Investor">
+        </div>
+        <h3>Elon Musk</h3>
+        <span>Technology Investor</span>
+
+        <div class="inv-socials">
+          <a href="#">f</a>
+          <a href="#">t</a>
+          <a href="#">in</a>
+          <a href="#">ig</a>
+        </div>
+      </div>
+
+      <!-- INVESTOR CARD -->
+      <div class="inv-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="inv-image-ring">
+          <img src="images/zak.jpg" alt="Investor">
+        </div>
+        <h3>Zak Bagans</h3>
+        <span>Private Investor</span>
+
+        <div class="inv-socials">
+          <a href="#">f</a>
+          <a href="#">t</a>
+          <a href="#">in</a>
+          <a href="#">ig</a>
+        </div>
+      </div>
+
+      <!-- INVESTOR CARD -->
+      <div class="inv-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="inv-image-ring">
+          <img src="images/tyler.jpg" alt="Investor">
+        </div>
+        <h3>Tyler Hynes</h3>
+        <span>Portfolio Strategist</span>
+
+        <div class="inv-socials">
+          <a href="#">f</a>
+          <a href="#">t</a>
+          <a href="#">in</a>
+          <a href="#">ig</a>
+        </div>
+      </div>
+
+      <!-- INVESTOR CARD -->
+      <div class="inv-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="inv-image-ring">
+          <img src="images/bezos.jpg" alt="Investor">
+        </div>
+        <h3>Jeff Bezos</h3>
+        <span>Institutional Investor</span>
+
+        <div class="inv-socials">
+          <a href="#">f</a>
+          <a href="#">t</a>
+          <a href="#">in</a>
+          <a href="#">ig</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  /* ================= AOS INIT ================= */
+  AOS.init({
+    duration: 800,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 120,
+    mirror: false
+  });
+
+  /* ================= MARKET TICKER ================= */
+  async function loadMarketData() {
+    const url =
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true";
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const btc = data.bitcoin;
+      const eth = data.ethereum;
+
+      document.getElementById("ticker").innerHTML = `
+        <span>
+          BTC/USD $${btc.usd.toLocaleString()}
+          <span class="${btc.usd_24h_change >= 0 ? "up" : "down"}">
+            ${btc.usd_24h_change.toFixed(2)}%
+          </span>
+        </span>
+
+        <span>
+          ETH/USD $${eth.usd.toLocaleString()}
+          <span class="${eth.usd_24h_change >= 0 ? "up" : "down"}">
+            ${eth.usd_24h_change.toFixed(2)}%
+          </span>
+        </span>
+      `;
+    } catch (error) {
+      document.getElementById("ticker").innerHTML =
+        "Unable to load market data.";
+    }
+  }
+
+  loadMarketData();
+  setInterval(loadMarketData, 30000);
+
+  /* ================= MOBILE MENU ================= */
+  function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("active");
+    document.getElementById("menuToggle").classList.toggle("open");
+  }
+</script>
+
+
+</body>
+</html>
