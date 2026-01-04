@@ -31,7 +31,7 @@ body {
 /* LINKS */
 .nav-links a {
   margin: 0 15px;
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   font-size: 14px;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .nav-login {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   font-size: 14px;
 }
@@ -60,10 +60,12 @@ body {
 /* BUTTONS */
 .btn {
   padding: 12px 22px;
-  border-radius: 30px;
+  border-radius: 22px;
   font-size: 14px;
   text-decoration: none;
 }
+
+/* helllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
 
 .btn-yellow {
   background: #f5c400;
@@ -158,7 +160,7 @@ body {
   text-align: center;
   position: relative;
   top: -250px;
-  border-radius: 12px;
+  border-radius: 22px;
 }
 
 /* ================= HERO ================= */
@@ -493,4 +495,550 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+/* ===== DESKTOP NAVBAR COLOR ON SCROLL ===== */
+@media (min-width: 769px) {
+  /* Navbar links */
+  .nav-dark-links .nav-links a {
+    color: #070707; /* light black */
+  }
+  .nav-dark-links .nav-links a:hover {
+    color: #000; /* dark black on hover */
+  }
+
+  /* Desktop Client Login */
+  .nav-dark-links .nav-login {
+    color: #070707; /* light black */
+  }
+  .nav-dark-links .nav-login:hover {
+    color: #000; /* dark black on hover */
+  }
+}
+
+
+
+/* ================= PLATFORM PREVIEW ================= */
+.platform-preview {
+  background: radial-gradient(circle at top, #0f1733, #040714);
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.platform-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.platform-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.6);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.platform-title {
+  font-size: 56px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 70px;
+}
+
+
+
+/* ================= PLATFORM BUTTONS ================= */
+/* ================= PLATFORM BUTTONS ================= */
+.platform-btn {
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* default shadow */
+}
+
+.platform-btn.primary {
+  background: #fff;
+  color: #000;
+}
+
+.platform-btn.outline {
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+}
+
+/* HOVER EFFECT (desktop) */
+.platform-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ACTIVE / TOUCH EFFECT (mobile + desktop) */
+.platform-btn:active,
+.platform-btn:focus {
+  animation: pressButton 0.15s forwards;
+}
+
+/* Optional subtle overlay effect when clicking/tapping */
+.platform-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 40px;
+}
+
+.platform-btn:active::after,
+.platform-btn:focus::after {
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ================= PRESS BUTTON ANIMATION ================= */
+@keyframes pressButton {
+  0% { transform: translateY(0) scale(1); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+  50% { transform: translateY(1px) scale(0.97); box-shadow: 0 5px 12px rgba(0,0,0,0.1); }
+  100% { transform: translateY(-3px) scale(1); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+}
+
+
+
+
+
+
+
+
+
+/* ================= FEATURES TRACK ================= */
+.platform-features {
+  overflow: hidden;
+  position: relative;
+}
+
+.platform-track {
+  display: flex;
+  gap: 26px;
+  min-width: max-content;
+}
+
+.platform-card {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+  padding: 36px 20px;
+  border-radius: 18px;
+}
+
+.platform-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #fff;
+  stroke-width: 1.8;
+  fill: none;
+  margin-bottom: 14px;
+}
+
+.platform-card p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ================= MOBILE SLIDE ================= */
+@media (max-width: 768px) {
+  .platform-preview {
+    padding: 90px 20px;
+  }
+
+  .platform-title {
+    font-size: 34px;
+  }
+
+  .platform-buttons {
+    flex-direction: column;
+  }
+
+  .platform-card {
+    min-width: 220px;
+  }
+
+  .platform-track {
+    animation: slideMobile 22s linear infinite;
+  }
+
+  @keyframes slideMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+/* ================= DESKTOP SLIDE ================= */
+@media (min-width: 769px) {
+  .platform-track {
+    animation: slideDesktop 40s ease-in-out infinite;
+  }
+
+  @keyframes slideDesktop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+
+
+
+
+
+
+
+/* ================= MARKET INSIGHTS ================= */
+.insights-section {
+  background: #ffffff;
+  padding: 110px 60px;
+}
+
+.insights-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.insights-header {
+  max-width: 520px;
+  margin-bottom: 60px;
+}
+
+.insights-header h2 {
+  font-size: 42px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.insights-header h2 span {
+  color: #f5c400;
+}
+
+.insights-header p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.insights-badge {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+/* GRID */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.insight-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.insight-image {
+  height: 350px;
+  overflow: hidden;
+}
+
+.insight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.insight-content {
+  padding: 22px;
+}
+
+.insight-category {
+  font-size: 15px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.insight-content h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.insight-date {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .insights-section {
+    padding: 80px 20px;
+  }
+
+  .insights-header h2 {
+    font-size: 32px;
+  }
+
+  .insights-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .insight-card {
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+}
+
+
+/* ================= CTA SECTION ================= */
+.cta-section {
+  background: #ffffff;
+  padding: 140px 20px;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.cta-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 38px;
+  background: #0a0f2c;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ARROW */
+.cta-arrow {
+  display: inline-block;
+  animation: arrowMove 1.4s ease-in-out infinite;
+}
+
+/* ARROW ANIMATION */
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 34px;
+  }
+
+  .cta-subtitle {
+    font-size: 16px;
+  }
+}
+
+
+
+/* ================= PLATFORM IMAGE SHOWCASE ================= */
+.platform-showcase {
+  background: #ffffff;
+  padding: 5px 40px;
+  overflow: hidden;
+}
+
+.platform-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* COMMON ITEM */
+.platform-item {
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.35s ease;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.platform-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* LEFT (BENT LEFT) */
+.platform-item.left {
+  width: 400px;
+  transform: perspective(1200px) rotateY(18deg) rotateZ(-2deg);
+}
+
+/* CENTER (FRONT) */
+.platform-item.center {
+  width: 420px;
+  transform: perspective(1200px);
+  z-index: 2;
+}
+
+/* RIGHT (BENT RIGHT) */
+.platform-item.right {
+  width: 300px;
+  transform: perspective(1200px) rotateY(-18deg) rotateZ(2deg);
+}
+
+/* ================= HOVER SHAKE (AOS STYLE) ================= */
+.platform-item:hover {
+  animation: shake 0.45s ease-in-out;
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-4px); }
+  40%  { transform: translateX(4px); }
+  60%  { transform: translateX(-3px); }
+  80%  { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .platform-wrapper {
+    gap: 40px;
+  }
+
+  .platform-item.center {
+    width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-showcase {
+    padding: 5px 20px;
+  }
+
+  .platform-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .platform-item.left,
+  .platform-item.center,
+  .platform-item.right {
+    transform: none;
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+
+/* ================= MOBILE: SHOW ONLY CENTER IMAGE ================= */
+@media (max-width: 768px) {
+
+  /* Hide left & right images */
+  .platform-item.left,
+  .platform-item.right {
+    display: none;
+  }
+
+  /* Center image full width */
+  .platform-item.center {
+    width: 100%;
+    max-width: 380px;
+    transform: none;
+  }
+
+  /* Center it properly */
+  .platform-wrapper {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
